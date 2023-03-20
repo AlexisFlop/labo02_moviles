@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">labo2-AlexisFLop</string>
+    <string name="bmi_text">BMI</string>
+    <string name="calculate_text">CALCULATE</string>
+    <string name="weight_text">Weight</string>
+    <string name="kg_text">Kg</string>
+    <string name="cm_text">cm</string>
+    <string name="height_text">Height</string>
+    <string name="height_hint_text">170</string>
+    <string name="weight_hint_text">70</string>
+</resources>

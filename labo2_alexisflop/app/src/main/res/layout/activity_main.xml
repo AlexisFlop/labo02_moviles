@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/layout_background"
+    android:orientation="vertical"
+    android:padding="@dimen/medium_gap"
+    tools:context=".MainActivity">
+
+    <TextView
+        style="@style/ShapeAppearance.Material3.Corner.Medium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_gap"
+        android:gravity="center"
+        android:text="@string/bmi_text"
+        android:textColor="@color/white"
+        android:textSize="@dimen/medium_text_gap" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/medium_gap"
+        android:layout_weight="2"
+        app:cardBackgroundColor="@color/card_background"
+        app:cardCornerRadius="@dimen/large_gap">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/medium_gap">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="@string/weight_text"
+                android:textColor="@color/white"
+                android:textSize="@dimen/medium_text_gap" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/weight_edit_text"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:hint="@string/weight_hint_text"
+                    android:inputType="numberDecimal"
+                    android:textColorHint="@color/text_hint"
+                    android:textSize="@dimen/extralarge_text_gap" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/kg_text"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/extralarge_text_gap" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/medium_gap"
+        android:layout_weight="2"
+        app:cardBackgroundColor="@color/card_background"
+        app:cardCornerRadius="@dimen/large_gap">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/medium_gap">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="@string/height_text"
+                android:textColor="@color/white"
+                android:textSize="@dimen/medium_text_gap" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/height_edit_text"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:hint="@string/height_hint_text"
+                    android:inputType="numberDecimal"
+                    android:textColorHint="@color/text_hint"
+                    android:textSize="@dimen/extralarge_text_gap" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/cm_text"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/extralarge_text_gap" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/calculate_button"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/medium_gap"
+        android:layout_weight="0.5"
+        android:backgroundTint="@color/btn_background"
+        android:text="@string/calculate_text"
+        android:textColor="@color/white"
+        android:textSize="@dimen/medium_text_gap" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.50"
+        app:cardBackgroundColor="@color/card_background"
+        app:cardCornerRadius="@dimen/large_gap">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/bmi_result_textview"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="@dimen/large_text_gap" />
+
+            <TextView
+                android:id="@+id/bmi_status_textview"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/medium_text_gap" />
+
+            <TextView
+                android:id="@+id/bmi_range_textview"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/text_hint"
+                android:textSize="@dimen/medium_text_gap" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>
